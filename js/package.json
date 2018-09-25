@@ -1,0 +1,18 @@
+{
+  "name": "bmd-scanner",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://git.rigado.com/rob.anderson/bmd-scanner.git"
+  },
+  "dependencies": {
+    "noble": "latest",
+    "request": "latest",
+    "yargs": "latest",
+    "gps": "latest",
+    "serialport": "latest",
+    "fs": "latest",
+    "bluetooth-hci-socket": "latest"
+  }
+}

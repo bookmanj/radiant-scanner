@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+while true; do
+  # Obtain URI value
+  URI="$(snapctl get uri)"
+
+  # Obtain PUB_INT value
+  PUB_INT="$(snapctl get pub-int)"
+
+  # Obtain PUB_INT value
+  REG_FILTER="$(snapctl get reg-filter)"
+
+  # run node $SNAP/lib/node_modules/bmd-scanner/scanner.js
+  node $SNAP/lib/node_modules/bmd-scanner/scanner.js --ibeacon $REG_FILTER --publishall --publishInterval $PUB_INT --url $URI
+done
