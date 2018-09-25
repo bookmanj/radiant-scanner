@@ -1,0 +1,7 @@
+#!/bin/sh -e
+
+# Initialize the URI, PUB_INT, REG_FILTER and BEACON_TYPE defaults
+snapctl set uri='http://127.0.0.1:8080/blereads'
+snapctl set pub-int=10
+snapctl set reg-filter='0101b392ada32224231605ef5877491[123]'
+snapctl set beacon-type='--ibeacon'

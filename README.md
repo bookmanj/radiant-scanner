@@ -1,4 +1,4 @@
-bmd-scanner Demo
+radiant-scanner Demo
 ===================
 
 # Overview
@@ -12,9 +12,9 @@ This is a node application that scans for the Kontakt.io, Ruuvi, BLE, standard B
 - BlueZ
 - cascade 500
 
-# snap-bmd-scanner/snapcraft.yaml file
+# snap-radiant-scanner/snapcraft.yaml file
 
-- The user will need to rename the name in line 1 to their preferred name ex.`xyz-bmd-scanner`
+- The user will need to rename the name in line 1 to their preferred name ex.`xyz-radiant-scanner`
 - On line 2, the user can declare their preferred version ex.`0.1`
 - On line 12 `command`, the URL is fictitious `https://xyz.com/feed`. The user will need to replace the fictitious URL with their own API POST HTTP/S URL "Endpoint" before they build their Snap.
 

@@ -1,0 +1,36 @@
+#!/bin/sh -e
+
+# Obtain URI value
+URI="$(snapctl get uri)"
+
+# Validate it
+if ! expr "$URI" : '^http' > /dev/null; then
+    echo "\"$URI\" is not a valid URI" >&2
+    exit 1
+fi
+
+
+# Obtain PUB_INT value
+PUB_INT="$(snapctl get pub-int)"
+
+# Validate it
+if ! expr "$PUB_INT" : '^[0-9]*$' > /dev/null; then
+    echo "\"$PUB_INT\" is not a valid intiger" >&2
+    exit 1
+fi
+
+
+# Obtain REG_FILTER value
+REG_FILTER="$(snapctl get reg-filter)"
+
+# no validation for this var
+
+
+# Obtain BEACON_TYPE value
+BEACON_TYPE="$(snapctl get beacon-type)"
+
+# Validate it
+if ! expr "$BEACON_TYPE" : '^--' > /dev/null; then
+    echo "\"$BEACON_TYPE\" is not a valid BEACON_TYPE" >&2
+    exit 1
+fi

@@ -7,9 +7,13 @@ while true; do
   # Obtain PUB_INT value
   PUB_INT="$(snapctl get pub-int)"
 
-  # Obtain PUB_INT value
+  # Obtain REG_FILTER value
   REG_FILTER="$(snapctl get reg-filter)"
 
+  # Obtain BEACON_TYPE value
+  BEACON_TYPE="$(snapctl get beacon-type)"
+
   # run node $SNAP/lib/node_modules/bmd-scanner/scanner.js
-  node $SNAP/lib/node_modules/bmd-scanner/scanner.js --ibeacon $REG_FILTER --publishall --publishInterval $PUB_INT --url $URI
+  #node $SNAP/lib/node_modules/bmd-scanner/scanner.js --ibeacon $REG_FILTER --publishall --publishInterval $PUB_INT --url $URI
+  node $SNAP/lib/node_modules/bmd-scanner/scanner.js $BEACON_TYPE $REG_FILTER --publishall --publishInterval $PUB_INT --url $URI
 done
